@@ -4,7 +4,6 @@
  * @package Minify
  */
 
-
 /**
  * In 'debug' mode, Minify can combine files with no minification and 
  * add comments to indicate line #s of the original files. 

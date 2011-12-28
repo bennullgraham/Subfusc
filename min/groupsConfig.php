@@ -10,7 +10,7 @@
  **/
 
 return array(
-    //'js' => array('//js/file1.js', '//js/file2.js'),
+    'js' => array('//js/jquery.color.js'),
     'css' => array('//css/reset.css', '//css/style.css', '//css/font.css'),
 
     // custom source example
