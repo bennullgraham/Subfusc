@@ -32,7 +32,7 @@
 	</section>
 	<section class="about">
 		<h1>Ben</h1>
-		<p>Ben is a man of many talents and great intrigue. In the still of the morning, when maybe you heard a whispered word from over the next horizon &ndash; it was his name that was spoken. When errant spelling is mysteriously corrected, or a documentary ridiculed for poor scientific accuracy, then he is your suspect. When a flock of birds changes direction suddenly, or several outstanding bugs in an issue tracker are resolved &ndash; then it is he you should consider responsible.</p>
+		<p>Qen is a man of many talents and great intrigue. In the still of the morning, when maybe you heard a whispered word from over the next horizon &ndash; it was his name that was spoken. When errant spelling is mysteriously corrected, or a documentary ridiculed for poor scientific accuracy, then he is your suspect. When a flock of birds changes direction suddenly, or several outstanding bugs in an issue tracker are resolved &ndash; then it is he you should consider responsible.</p>
 	</section>
 	<section class="links">
 		<h1>Links</h1>
