@@ -53,29 +53,8 @@
 	</section>
 <script type="text/javascript">
 //<![CDATA[
-	$(function(){
-		var links = $('ul.links li a');
-		links.mouseenter(function(){
-			$(this).parent().stop().animate({'margin-left':'5px'}, 100);
-		});
-		links.mouseleave(function(){
-			$(this).parent().stop().animate({'margin-left':'0'}, 100);
-		});
-	});
-	
-	$(function(){
-		var palette = ['#ce3028','#d23a24','#ce4c26','#c7642f','#a67139','#6b774b','#4f7a6d','#416588','#423499','#3c228b','#37177f'];
-		setInterval(function(){
-			colour = palette[Math.floor(Math.random() * (palette.length-1))];
-			$('header').animate({
-				'borderBottomColor':colour
-			}, 5000);
-		}, 10000);
-	});
-
 	jQl.loadjQ('//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js');
-	jQl.loadjQdep('js/jquery.color.js');
-
+	jQl.loadjQdep('/min/js');
 //]]>
 </script>
 </body>
