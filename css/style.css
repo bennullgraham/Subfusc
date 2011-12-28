@@ -1,0 +1,92 @@
+body {
+	font-size: 0.9em;
+	color: #333;
+	font-family: 'Open Sans Condensed', sans-serif;
+}
+
+body {
+	
+	/* Opera 11.10+ */
+	background: -o-linear-gradient(top, rgba(250,248,245,1), rgba(255,255,255,1));
+	
+	/* Firefox 3.6+ */
+	background: -moz-linear-gradient(top, rgba(250,248,245,1), rgba(255,255,255,1));
+	
+	/* Chrome 7+ & Safari 5.03+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0, rgba(250,248,245,1)), color-stop(1, rgba(255,255,255,1)));
+	
+	background-repeat: no-repeat; 
+	background-color: #fff; }
+
+header {
+	/* Opera 11.10+ */
+	background: -o-linear-gradient(top, rgba(100,100,100,1), rgba(50,50,50,1));
+	
+	/* Firefox 3.6+ */
+	background: -moz-linear-gradient(top, rgba(100,100,100,1), rgba(50,50,50,1));
+	
+	/* Chrome 7+ & Safari 5.03+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0, rgba(100,100,100,1)), color-stop(1, rgba(50,50,50,1)));
+	
+	background-repeat: no-repeat; 
+	background-color: rgb(40,40,40);
+	
+	padding: 1em 0 1em 100px;
+	margin: 0 0 3em 0;
+	
+	border-bottom: 5px solid #abc; }
+	
+header h1 {
+	font-size: 110%;
+	color: #ccc;
+	text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.4); }
+
+p {
+	margin: 0 0 1em 0;
+	line-height: 1.5em;
+	width: 40em;
+}
+
+section h1 {
+	text-transform: uppercase;
+	font-weight: bold;
+	font-family: sans-serif; 
+	font-size: 75%; 
+	margin: 0 0 1em 0; 
+	color: #59c; }
+
+section {
+	margin: 0 0 3em 100px;
+}
+	
+dd, dt {
+	margin: 0.5em 0; }
+
+dd {
+	color: #999; }
+
+ul.links li {
+	position: relative; 
+	margin: 0 0 1em 0; }
+	
+	ul.links li .icon {
+		position: absolute;
+		top: 0;
+		left: -2em; 
+		width: 16px;
+		height: 16px; 
+		background: transparent url('/img/sprite-icon.png') no-repeat top left;
+		text-indent: -10000px;
+	}
+
+	ul.links li .icon.gp { background-position: 0px -00px; }
+	ul.links li .icon.li { background-position: 0px -16px; }
+	ul.links li .icon.em { background-position: 0px -32px; }
+		
+a {
+	color: #59c; 
+	text-decoration: none; }
+	
+a:hover {
+	color: #333; 
+	text-decoration: none; }
