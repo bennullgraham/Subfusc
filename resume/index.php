@@ -45,7 +45,7 @@
 		<p class="sub">Web Development</p>
 		<ul class="bullet">
 			<li>Specified, designed and built a security-sensitive document tracking service with recurring payment processing and multiple user tiers.</li>
-			<li>Responsible for moving integration, staging, and many production sites from internal or VPS hardware to Amazon EC2 instance.</li>
+			<li>Responsible for moving integration, staging, and many production sites from internal or VPS hardware to Amazon EC2 instances.</li>
 			<li>Championed adoption of issue tracking, continuous integration, more thorough project and code documentation, and responsiveness improvements through profiling and optimisation of HTML content and HTTP responses.</li>
 			<li>Responsible for a complete functional and visual overhaul of standard CMS and Auth tools deployed with all company projects, including the addition of a fine-grained and flexible ACL-based authorisation system.</li>
 			<li>Completed a full respecification and build of the company website, including CMS features to ensure it remains strictly XHTML+RDFa compliant.</li>
