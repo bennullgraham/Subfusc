@@ -10,7 +10,7 @@
  **/
 
 return array(
-    'js' => array('//js/jquery.color.js', '//js/header-fade.js', '//js/profile-links-hover.js'),
+    'js' => array('//js/profile-links-hover.js'),
     'css' => array('//css/reset.css', '//css/style.css', '//css/font.css'),
 
     // custom source example

@@ -1,5 +1,5 @@
 body {
-	font-size: 0.9em;
+	font-size: 1.2em;
 	color: #333;
 	font-family: 'Open Sans Condensed', sans-serif;
 }
@@ -16,7 +16,10 @@ body {
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(0, rgba(250,248,245,1)), color-stop(1, rgba(255,255,255,1)));
 	
 	background-repeat: no-repeat; 
-	background-color: #fff; }
+	background-color: #fff; 
+
+	margin-bottom: 5em;
+}
 
 header {
 	/* Opera 11.10+ */
@@ -34,12 +37,20 @@ header {
 	padding: 1em 0 1em 100px;
 	margin: 0 0 3em 0;
 	
-	border-bottom: 5px solid #abc; }
+	border-bottom: 5px solid #7b875b; 
+
+	-webkit-box-shadow: 0 0 35px #5f8a7d;
+	-moz-box-shadow: 0 0 35px #5f8a7d;
+	-o-box-shadow: 0 0 35px #5f8a7d;
+}
 	
 header h1 {
+	line-height: 2em;
 	font-size: 110%;
-	color: #ccc;
-	text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.4); }
+	font-weight: bold;
+	color: #fff;
+	text-shadow: 0 0 15px rgba(0, 0, 0, 0.5); 
+}
 
 p {
 	margin: 0 0 1em 0;
@@ -50,10 +61,10 @@ p {
 section h1 {
 	text-transform: uppercase;
 	font-weight: bold;
-	font-family: sans-serif; 
-	font-size: 75%; 
 	margin: 0 0 1em 0; 
-	color: #59c; }
+	color: #59c; 
+	text-shadow: 0 0 5px #fff;
+}
 
 section {
 	margin: 0 0 3em 100px;
@@ -84,9 +95,42 @@ ul.links li {
 	ul.links li .icon.em { background-position: 0px -32px; }
 		
 a {
-	color: #59c; 
+	color: rgb(85, 153, 204);
 	text-decoration: none; }
 	
 a:hover {
-	color: #333; 
-	text-decoration: none; }
+	background-color: rgba(85, 153, 204, 0.1);
+	text-decoration: none; 
+}
+
+ul {
+	width: 40em;
+}
+ul.bullet li {
+	position: relative;
+	margin: 0 0 0 2em;
+	line-height: 1.5em;
+}
+ul.bullet li:before {
+	position: absolute;
+	left: -1.0em;
+	display: block;
+	font-weight: bold;
+	content: "-";
+	color: #aaa;
+	width: 1em;
+	height: 100%;
+}
+h2 {
+	margin: 1em 0;
+	font-weight: bold;
+}
+h2 span.date-range {
+	font-size: 80%;
+	color: #999;
+}
+
+p.sub {
+	font-size: 80%;
+	color: #777;
+}
