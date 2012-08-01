@@ -23,36 +23,40 @@
 </head>
 <body>
 	<header>
-		<h1>bgraham.com.au</h1>
+		<div class="container">
+			<h1>bgraham.com.au</h1>
+		</div>
 	</header>
-	<section class="about">
-		<h1>Ben</h1>
-		<p>Ben is a man of many talents and great intrigue. In the still of the morning, when maybe you heard a whispered word from over the next horizon &ndash; it was his name that was spoken. When errant spelling is mysteriously corrected, or a documentary ridiculed for poor scientific accuracy, then he is your suspect. When a flock of birds changes direction suddenly, or several outstanding bugs in an issue tracker are resolved &ndash; then it is he you should consider responsible.</p>
-	</section>
-	<section class="host">
-		<h1>Host</h1>
-		<dl>
-			<dt>$ uptime</dt>
-			<dd><?php echo exec('uptime'); ?></dd>
-		</dl>
-	</section>
-	<section class="links">
-		<h1>Further Reading</h1>
-		<ul class="links">
-			<li>
-				<span class="icon gp">Google+</span>
-				<a href="//plus.google.com/106149912329040737914?rel=author" rel="author" target="_blank">Google+ Profile</a>
-			</li>
-			<li>
-				<span class="icon li">LinkedIn</span>
-				<a href="//www.linkedin.com/profile/view?id=79501528" rel="me" target="_blank">LinkedIn Profile</a>
-			</li>
-			<li>
-				<span class="icon em">Email</span>
-				bgraham / at / bgraham.com.au
-			</li>
-		</ul>
-	</section>
+	<div class="container">
+		<section class="about">
+			<h1>Ben</h1>
+			<p>Ben is a man of many talents and great intrigue. In the still of the morning, when maybe you heard a whispered word from over the next horizon &ndash; it was his name that was spoken. When errant spelling is mysteriously corrected, or a documentary ridiculed for poor scientific accuracy, then he is your suspect. When a flock of birds changes direction suddenly, or several outstanding bugs in an issue tracker are resolved &ndash; then it is he you should consider responsible.</p>
+		</section>
+		<section class="host">
+			<h1>Host</h1>
+			<dl>
+				<dt>$ uptime</dt>
+				<dd><?php echo exec('uptime'); ?></dd>
+			</dl>
+		</section>
+		<section class="links">
+			<h1>Further Reading</h1>
+			<ul class="links">
+				<li>
+					<span class="icon gp">Google+</span>
+					<a href="//plus.google.com/106149912329040737914?rel=author" rel="author" target="_blank">Google+ Profile</a>
+				</li>
+				<li>
+					<span class="icon li">LinkedIn</span>
+					<a href="//www.linkedin.com/profile/view?id=79501528" rel="me" target="_blank">LinkedIn Profile</a>
+				</li>
+				<li>
+					<span class="icon em">Email</span>
+					bgraham / at / bgraham.com.au
+				</li>
+			</ul>
+		</section>
+	</div>
 <script type="text/javascript">
 //<![CDATA[
 	jQl.loadjQ('//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js');

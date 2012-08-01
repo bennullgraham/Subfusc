@@ -11,7 +11,7 @@
 
 return array(
     'js' => array('//js/profile-links-hover.js'),
-    'css' => array('//css/reset.css', '//css/style.css', '//css/font.css'),
+    'css' => array('//css/reset.css', '//css/style.css', '//css/font.css', '//css/skeleton.css'),
 
     // custom source example
     /*'js2' => array(

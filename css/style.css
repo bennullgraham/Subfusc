@@ -34,17 +34,23 @@ header {
 	background-repeat: no-repeat; 
 	background-color: rgb(40,40,40);
 	
-	padding: 1em 0 1em 100px;
+	padding: 1em 0;
 	margin: 0 0 3em 0;
 	
-	border-bottom: 5px solid #7b875b; 
+	border-bottom: 5px solid rgb(60, 75, 100); 
 
 	-webkit-box-shadow: 0 0 35px #5f8a7d;
 	-moz-box-shadow: 0 0 35px #5f8a7d;
 	-o-box-shadow: 0 0 35px #5f8a7d;
+
+	/*position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;*/
 }
 	
 header h1 {
+	margin: 0 20px;
 	line-height: 2em;
 	font-size: 110%;
 	font-weight: bold;
@@ -55,7 +61,6 @@ header h1 {
 p {
 	margin: 0 0 1em 0;
 	line-height: 1.5em;
-	width: 40em;
 }
 
 section h1 {
@@ -67,7 +72,7 @@ section h1 {
 }
 
 section {
-	margin: 0 0 3em 100px;
+	margin: 0 20px 3em 20px;
 }
 	
 dd, dt {
@@ -103,9 +108,6 @@ a:hover {
 	text-decoration: none; 
 }
 
-ul {
-	width: 40em;
-}
 ul.bullet li {
 	position: relative;
 	margin: 0 0 0 2em;
