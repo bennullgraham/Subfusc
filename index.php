@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<link rel="stylesheet" href="min/css?rev=2">
+	<link rel="stylesheet" href="min/css?rev=3">
 	<link rel="openid.server" href="http://www.myopenid.com/server"/>
 	<link rel="openid.delegate" href="http://blackwater.myopenid.com/"/>
 	<script>
