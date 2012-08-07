@@ -1,0 +1,163 @@
+.syntaxhighlighter
+{
+	overflow: hidden;
+}
+
+/* Highlighed line number */
+.syntaxhighlighter .line.highlighted .number
+{
+	background-color: #ddd;
+	color: black;
+}
+
+/* Highlighed line */
+.syntaxhighlighter .line.highlighted.alt1 .content,
+.syntaxhighlighter .line.highlighted.alt2 .content
+{
+	background-color: #ddd;
+}
+
+/* Gutter line numbers */
+.syntaxhighlighter .gutter .line
+{
+	display: none;
+}
+
+/* Add border to the lines */
+.syntaxhighlighter .line .content
+{
+	border-left: 2px solid #ccc;
+	color: #000;
+}
+
+.syntaxhighlighter.printing .line .content 
+{
+	border: 0;
+}
+
+/* First line */
+.syntaxhighlighter .line.alt1 .content
+{
+	background-color: #fafafa;
+}
+
+/* Second line */
+.syntaxhighlighter .line.alt2 .content
+{
+	background-color: #fafafa;
+}
+
+.syntaxhighlighter .line .content .block
+{
+/*  background: url(wrapping.png) 0 14px no-repeat;*/
+}
+
+.syntaxhighlighter .ruler
+{
+	color: silver;
+	background-color: #F8F8F8;
+	border-left: 3px solid #6CE26C;
+}
+
+.syntaxhighlighter.nogutter .ruler
+{
+	border: 0;
+}
+
+/************************************
+ * Actual syntax highlighter colors.
+ ************************************/
+.syntaxhighlighter .plain,
+.syntaxhighlighter .plain a
+{ 
+	color: #000;
+}
+
+.syntaxhighlighter .comments,
+.syntaxhighlighter .comments a
+{ 
+	color: #999988;
+	font-style: italic;
+}
+
+.syntaxhighlighter .string,
+.syntaxhighlighter .string a
+{
+	color: #D81745; 
+}
+
+.syntaxhighlighter .keyword
+{ 
+	font-weight: bold; 
+}
+
+.syntaxhighlighter .preprocessor 
+{ 
+	color: gray; 
+}
+
+.syntaxhighlighter .regex
+{
+  color: #159828;
+}
+
+.syntaxhighlighter .numbers
+{
+  color:#1C9898;
+}
+
+.syntaxhighlighter .expr
+{
+  color:#D81745;
+}
+
+.syntaxhighlighter .method
+{
+  font-style: italic;
+}
+
+.syntaxhighlighter .variable 
+{ 
+	color: #177F80; 
+}
+
+.syntaxhighlighter .value
+{ 
+	color: red; 
+}
+
+.syntaxhighlighter .functions
+{ 
+	color: #990000; 
+	font-weight:bold;
+}
+
+.syntaxhighlighter .constants
+{ 
+	color: #177F80; 
+}
+
+.syntaxhighlighter .script
+{ 
+	background-color: yellow;
+}
+
+.syntaxhighlighter .color1,
+.syntaxhighlighter .color1 a
+{ 
+	color: #177F80; 
+}
+
+.syntaxhighlighter .color2,
+.syntaxhighlighter .color2 a
+{ 
+	color: #960B73; 
+}
+
+.syntaxhighlighter .color3,
+.syntaxhighlighter .color3 a
+{ 
+	color: red; 
+}
+
+/** end ugliness */
