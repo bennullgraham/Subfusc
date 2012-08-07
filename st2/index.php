@@ -30,7 +30,7 @@
 		<section class="package-control">
 			<h1>Install Package Control</h1>
 			<p>
-				The apt-get of ST2. Paste the following in the ST2 console (Ctrl+~):
+				The apt-get of ST2. Paste the following in the ST2 console (<span class="key">Ctrl</span>+<span class="key">~</span>):
 			</p>
 			<pre class="brush: python code">import urllib2,os
 pf='Package Control.sublime-package'
@@ -46,7 +46,7 @@ print 'Please restart Sublime Text to finish installation'</pre>
 		<section class="install-package">
 			<h1>Install a Package</h1>
 			<p>
-				Hit Ctrl-Shift-P and type 'install<enter>'. Then, type (part of) a package name, and <enter> again.
+				Hit <span class="key">Ctrl</span>+<span class="key">Shift</span>+<span class="key">P</span> and type 'install <span class="key">Enter</span>'. Then, type (part of) a package name, and <span class="key">Enter</span> again.
 			</p>
 		</section>
 		<section class="discover-package">
@@ -66,7 +66,7 @@ print 'Please restart Sublime Text to finish installation'</pre>
     "working_dir": "$project_path"
 }</pre>
 			<p>
-				In ST2, go Tools->Build System->Phing-Sass
+				In ST2, go Tools&rarr;Build System&rarr;Phing-Sass
 			</p>
 			<h2>SublimeLinter</h2>
 			<p>
@@ -91,7 +91,7 @@ print 'Please restart Sublime Text to finish installation'</pre>
 				This refreshes the browser on save. For CSS, the page need not reload. Awesome. Your browser will need a LiveReload plugin (<a href="https://chrome.google.com/webstore/detail/jnihajbhpnppcggbcgedagnkighmdlei">https://chrome.google.com/webstore/detail/jnihajbhpnppcggbcgedagnkighmdlei</a>).
 			</p>
 			<p>
-				You will need to give phing time to run its sass->css target:
+				You will need to give phing time to run its sass&rarr;css target:
 			</p>
 <pre class="brush: js code">// ~/.config/sublime-text-2/Packages/User/LiveReload.sublime-settings:
 {
@@ -105,9 +105,6 @@ print 'Please restart Sublime Text to finish installation'</pre>
 	jQl.loadjQ('//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js');
 	jQl.loadjQdep('/min/js');
 	jQl.loadjQdep('/min/jssh');
-	$(function(){
-		SyntaxHighlighter.all();
-	})
 //]]>
 </script>
 
