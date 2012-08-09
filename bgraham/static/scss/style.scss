@@ -49,12 +49,14 @@ header {
 	width: 100%;*/
 }
 	
-header h1 {
-	margin: 0 20px;
-	line-height: 2em;
-	font-size: 110%;
-	font-weight: bold;
-	color: #fff;
+header {
+	h1 {
+		margin: 0 20px;
+		line-height: 2em;
+		font-size: 110%;
+		font-weight: bold;
+		color: #fff;
+	}
 }
 
 p {
@@ -62,17 +64,17 @@ p {
 	line-height: 1.5em;
 }
 
-section h1 {
-	text-transform: uppercase;
-	font-weight: bold;
-	margin: 0 0 1em 0; 
-	color: #59c; 
-}
-
 section {
+	h1 {
+		text-transform: uppercase;
+		font-weight: bold;
+		margin: 0 0 1em 0; 
+		color: #59c; 
+	}
+
 	margin: 0 40px 3em 40px;
 }
-	
+
 dd, dt {
 	margin: 0.5em 0; }
 
@@ -81,55 +83,60 @@ dd {
 
 ul.links li {
 	position: relative; 
-	margin: 0 0 1em 0; }
+	margin: 0 0 1em 0; 
 	
-	ul.links li .icon {
+	.icon {
 		position: absolute;
 		top: 0;
 		left: -2em; 
 		width: 16px;
 		height: 16px; 
-		background: transparent url('/img/sprite-icon.png') no-repeat top left;
+		background: transparent url('/static/img/sprite-icon.png') no-repeat top left;
 		text-indent: -10000px;
 	}
 
-	ul.links li .icon.gp { background-position: 0px -00px; }
-	ul.links li .icon.li { background-position: 0px -16px; }
-	ul.links li .icon.em { background-position: 0px -32px; }
+	.icon.gp { background-position: 0px -00px; }
+	.icon.li { background-position: 0px -16px; }
+	.icon.em { background-position: 0px -32px; }
+
+}
 		
 a {
 	color: rgb(85, 153, 204);
 	text-decoration: none;
 	padding: 0 0.2em;
+	&:hover {
+		background-color: rgba(85, 153, 204, 0.1);
+		text-decoration: none; 
+	}
 }
 	
-a:hover {
-	background-color: rgba(85, 153, 204, 0.1);
-	text-decoration: none; 
-}
 
-ul.bullet li {
-	position: relative;
-	margin: 0 0 0 2em;
-	line-height: 1.5em;
-}
-ul.bullet li:before {
-	position: absolute;
-	left: -1.0em;
-	display: block;
-	font-weight: bold;
-	content: "-";
-	color: #aaa;
-	width: 1em;
-	height: 100%;
+ul.bullet {
+	li {
+		position: relative;
+		margin: 0 0 0 2em;
+		line-height: 1.5em;
+		&:before {
+			position: absolute;
+			left: -1.0em;
+			display: block;
+			font-weight: bold;
+			content: "-";
+			color: #aaa;
+			width: 1em;
+			height: 100%;
+		}
+	}
+
 }
 h2 {
 	margin: 1em 0;
 	font-weight: bold;
-}
-h2 span.date-range {
-	font-size: 80%;
-	color: #999;
+	span.date-range {
+		font-size: 80%;
+		color: #999;
+	}
 }
 
 p.sub {
@@ -169,17 +176,23 @@ span.key {
 .container section.skills dl {
 	margin: 0 0 1em 0;
 }
-section.skills dl dt {
-	margin: 0;
-	padding: 0.5em 0 0 0;
-	vertical-align: top;
-	color: #59c;
-	line-height: 1.5em;
-}
-section.skills dl dd {
-	margin: 0;
-	padding: 0.5em 0;
-	vertical-align: top;
-	color: #222;
-	line-height: 1.5em;
+section.skills {
+	dl {
+		dt {
+			margin: 0;
+			padding: 0.5em 0 0 0;
+			vertical-align: top;
+			color: #999;
+			line-height: 1.5em;
+			text-align: left;
+			border-bottom: 1px solid #eee;
+		}
+		dd {
+			margin: 0;
+			padding: 0.5em 0;
+			vertical-align: top;
+			color: #222;
+			line-height: 1.5em;
+		}
+	}
 }

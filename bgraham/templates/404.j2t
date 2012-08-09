@@ -1,0 +1,7 @@
+{% extends "base.j2t" %}
+{% block content %}
+	<section>
+		<h1>Uhoh</h1>
+		<p>Content not found</p>
+	</section>
+{% endblock content %}

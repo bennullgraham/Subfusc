@@ -4,6 +4,7 @@
  *
  */
 var f = function() {
+	alert('f');
 	typeof(SyntaxHighlighter) === 'undefined' ? setTimeout(f, 100) : SyntaxHighlighter.highlight();
 }
 f()
