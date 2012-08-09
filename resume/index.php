@@ -1,8 +1,9 @@
 <?php header('Content-Type: text/html; charset=UTF-8'); ?><!DOCTYPE html>
+<?php $rev = exec('git rev-parse --short HEAD'); ?>
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<link rel="stylesheet" href="/min/css?rev=3">
+	<link rel="stylesheet" href="/min/css?rev=<?php echo $rev; ?>">
 	<script>
 		var jQl={q:[],dq:[],ready:function(a){typeof a=="function"&&jQl.q.push(a);return jQl},unq:function(){for(var a=0;a<jQl.q.length;a++)jQl.q[a]();jQl.q=[]},bId:null,boot:function(a){if(typeof window.jQuery.fn=="undefined"){if(!jQl.bId)jQl.bId=setInterval(function(){jQl.boot(a)},25)}else{jQl.bId&&clearInterval(jQl.bId);jQl.bId=0;jQl.unqjQdep();$(jQl.unq());typeof a=="function"&&a()}},booted:function(){return jQl.bId===0},loadjQ:function(a,c){setTimeout(function(){var b=document.createElement("script"); b.src=a;document.getElementsByTagName("head")[0].appendChild(b)},1);jQl.boot(c)},loadjQdep:function(a){jQl.loadxhr(a,jQl.qdep)},qdep:function(a){if(a)typeof window.jQuery.fn!=="undefined"&&!jQl.dq.length?jQl.rs(a):jQl.dq.push(a)},unqjQdep:function(){if(typeof window.jQuery.fn=="undefined")setTimeout(jQl.unqjQdep,50);else{for(var a=0;a<jQl.dq.length;a++)jQl.rs(jQl.dq[a]);jQl.dq=[]}},rs:function(a){var c=document.createElement("script");document.getElementsByTagName("head")[0].appendChild(c);c.text= a},loadxhr:function(a,c){var b;b=jQl.getxo();b.onreadystatechange=function(){b.readyState!=4||200!=b.status||c(b.responseText,a)};try{b.open("GET",a,true);b.send("")}catch(d){}},getxo:function(){var a=false;try{a=new XMLHttpRequest}catch(c){for(var b=["MSXML2.XMLHTTP.5.0","MSXML2.XMLHTTP.4.0","MSXML2.XMLHTTP.3.0","MSXML2.XMLHTTP","Microsoft.XMLHTTP"],d=0;d<b.length;++d){try{a=new ActiveXObject(b[d])}catch(e){continue}break}}finally{return a}}}; if(typeof window.jQuery=="undefined")var $=jQl.ready,jQuery=$;
 	</script>
@@ -71,10 +72,24 @@
 		<section class="skills">
 			<h1>Skills</h1>
 			<p>
-				In brief, I am a skilled PHP developer with full confidence in all languages and concepts used in a modern MVC web application. I can speak Python and Java competently, and have experience with several other languages. I administer many Linux machines (both virtual and actual computers), and am completely at home in a command-line environment.
+				I am a skilled PHP developer with full confidence in all languages and concepts used in a modern MVC web application. I can speak Python and Java competently, and have experience with several other languages. I administer many Linux machines (both virtual and actual computers), and am completely at home in a command-line environment.
 			</p>
+			<dl class="fifteen columns">
+				<dt class="alpha four columns">Web Languages and Technologies</dt>
+				<dd class="omega eleven columns">PHP, HTML, CSS/SASS, Javascript, SQL. Various APIs including Google Maps, Facebook, Twitter and AWS. Adherance to accessibility guidelines. Semantically correct and strictly valid markup. Stress testing, profiling. Responsive design.</dd>
+				<dt class="alpha four columns">Libraries and Frameworks</dt>
+				<dd class="omega eleven columns">CakePHP (MVC), jQuery, Bootstrap, Skeleton, Dojo, Modernizr. Minifier, SyntaxHighlighter. PHPUnit.</dd>
+				<dt class="alpha four columns">Infrastructure and Systems</dt>
+				<dd class="omega eleven columns">Debian/Ubuntu administration. Xen and Virtualbox. AWS services such as S3 and EC2. LVM, RAID, scheduled backups. Apache, nginx, varnish, APC.</dd>
+				<dt class="alpha four columns">Security</dt>
+				<dd class="omega eleven columns">Prevention of XSS, SQL injection, and other web exploits. Sound understanding of good security practices, same origin policy, hashing and encryption strategies.</dd>
+				<dt class="alpha four columns">Software</dt>
+				<dd class="omega eleven columns">Subversion, git. Phing. Puppet. KCacheGrind, Charles, xhprof, apachebench, httperf. GNU coreutils. Molybdenum/Selenium. Chrome/Webkit Developer Tools.</dd>
+				<dt class="alpha four columns">Other Languages</dt>
+				<dd class="omega eleven columns">Fluent with Python and Bash. Competent ability with Java. Experience with Visual Basic and C++.</dd>
+			</dl>
 			<p>
-				For a full list of technology-related acronyms, please see my <a href="//www.linkedin.com/profile/view?id=79501528" rel="me">LinkedIn profile</a>. For code samples, see my <a href="https://github.com/bennullgraham/" rel="me">GitHub account</a>.
+				For further technology-related acronyms, please see my <a href="//www.linkedin.com/profile/view?id=79501528" rel="me">LinkedIn profile</a>. For code samples, see my <a href="https://github.com/bennullgraham/" rel="me">GitHub account</a>.
 			</p>
 		</section>
 		<section class="signoff">
