@@ -4,6 +4,9 @@
 <head>
 	<meta charset="utf-8">
 	<link rel="stylesheet" href="min/css?rev=<?php echo $rev; ?>">
+	<!--[if lt IE 9]>
+	<script src="/js/html5shiv.js"></script>
+	<![endif]-->
 	<link rel="openid.server" href="http://www.myopenid.com/server"/>
 	<link rel="openid.delegate" href="http://blackwater.myopenid.com/"/>
 	<script>
