@@ -1,5 +1,5 @@
 <?php header('Content-Type: text/html; charset=UTF-8'); ?><!DOCTYPE html>
-<?php $rev = exec('git rev-parse --short HEAD'); ?>
+<?php $rev = filemtime(__FILE__); ?>
 <html lang="en">
 <head>
 	<meta charset="utf-8">
