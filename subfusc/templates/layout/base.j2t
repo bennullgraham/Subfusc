@@ -7,7 +7,7 @@
 	<header>
 		{% block header %}
 		<div class="container">
-			<h1>bgraham.com.au</h1>
+			<h1 class="fourteen columns">bgraham.com.au</h1>
 		</div>
 		{% endblock header %}
 	</header>
