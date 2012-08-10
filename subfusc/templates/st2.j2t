@@ -1,4 +1,4 @@
-{% extends "base.j2t" %}
+{% extends "layout/base.j2t" %}
 {% block content %}
 <section class="package-control">
 	<h1>Install Package Control</h1>
