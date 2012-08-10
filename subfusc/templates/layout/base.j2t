@@ -1,15 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	{% block head %}{% include 'layout/header.j2t' %}{% endblock head %}
+	{% block head %}{% include 'layout/head.j2t' %}{% endblock head %}
 </head>
 <body>
 	<header>
-		{% block header %}
-		<div class="container">
-			<h1 class="fourteen columns">bgraham.com.au</h1>
-		</div>
-		{% endblock header %}
+		{% block header %}{% include 'layout/header.j2t' %}{% endblock header %}
 	</header>
 	<div class="container">
 		<div class="main-column fourteen columns">
