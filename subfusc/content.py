@@ -30,6 +30,6 @@ def page_not_found(error):
     return render_template('404.j2t'), 404
 
 
-def run():
+# def run():
     # app.run(host='0.0.0.0', debug=True)
-    app.run(debug=True)
+    # app.run(debug=True)

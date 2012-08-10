@@ -1,0 +1,3 @@
+recursive-include subfusc/templates *
+recursive-include subfusc/static *
+recursive-include subfusc/static-src *
