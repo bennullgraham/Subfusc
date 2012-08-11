@@ -6,27 +6,24 @@ from gevent.wsgi import WSGIServer
 
 
 app = Flask(__name__)
-# app.config.from_object('default-config')
-# if os.environ.get('SUBFUSC_SETTINGS'):
-    #app.config.from_envvar('SUBFUSC_SETTINGS')
-
-app.debug = True
+app.config.from_object('default-config')
+if os.environ.get('SUBFUSC_SETTINGS'):
+    app.config.from_envvar('SUBFUSC_SETTINGS')
 
 # configure assets
 assets = Environment(app)
 assets.versions = 'hash'
-# assets.url = '/static'
-# assets.load_path = 'static-src'  # look for asset src files here
-# assets.directory = app.config['ASSETS_DIRECTORY']  # asset outputs relative to here
+assets.url = '/static'
 bundles = YAMLLoader('subfusc/static-src/assets.yaml').load_bundles()
 [assets.register(name, bundle) for name, bundle in bundles.iteritems()]
 
 
-if app.debug == True:
-    app.run(host='0.0.0.0')
-else:
-    http_server = WSGIServer(('', 5000), app)
-    http_server.serve_forever()
+def run():
+    if app.debug == True:
+        app.run(host='0.0.0.0')
+    else:
+        http_server = WSGIServer(('', 5000), app)
+        http_server.serve_forever()
 
 
 @app.route("/")
