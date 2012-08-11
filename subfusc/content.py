@@ -4,6 +4,7 @@ from flask.ext.assets import Environment
 from webassets.loaders import YAMLLoader
 from gevent.wsgi import WSGIServer
 
+here, f = os.path.split(os.path.abspath(__file__))
 
 app = Flask(__name__)
 app.config.from_object('default-config')
@@ -14,7 +15,7 @@ if os.environ.get('SUBFUSC_SETTINGS'):
 assets = Environment(app)
 assets.versions = 'hash'
 assets.url = '/static'
-bundles = YAMLLoader('subfusc/static-src/assets.yaml').load_bundles()
+bundles = YAMLLoader("%s/static-src/assets.yaml" % here).load_bundles()
 [assets.register(name, bundle) for name, bundle in bundles.iteritems()]
 
 
