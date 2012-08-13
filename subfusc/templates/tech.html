@@ -1,0 +1,28 @@
+{% extends 'layout/base.html' %}
+{% block content %}
+<section class="stack">
+	<h1>Stack</h1>
+	<p>
+		This site is cached by <a href="https://www.varnish-cache.org/">varnish</a>. Behind varnish, <a href="http://nginx.org/">nginx</a> either serves static files directly or hands off application requests to <a href="http://www.gevent.org/">gevent</a>. gevent serves a lightweight Python application written in the <a href="http://flask.pocoo.org/">Flask</a> web framework.
+	</p>
+	<p>
+		<a href="http://elsdoerfer.name/docs/flask-assets/">Flask-Assets</a> is employed to bundle and filter CSS and Javascript source files. Javascript is run through <a href="http://opensource.perlig.de/rjsmin/">rJsmin</a>, and CSS through <a href="https://github.com/Kronuz/pyScss/">pyScss</a>, a Python implementation of the compiler for the SCSS variant of <a href="http://sass-lang.com/">Sass</a>. All Javascript source is loaded asynchronously with a variant of <a href="http://www.dustindiaz.com/scriptjs/">$script.js</a>, with the exception of one or two small inline snippets (one of which is, obviously, the asynchronous loader itself).
+	</p>
+</section>
+<section class="performance">
+	<h1>Performance</h1>
+	<p>
+		Ignoring transport-layer delays, the stack employed allows thousands of requests per second with response times in the tens of milliseconds. These figures were obtained with:
+	</p> 
+	<div class="syntax-wrap"><pre class="brush: bash syntax">$ sudo httperf --hog --server=bgraham.com.au --uri=/ --num-conns=5000 --rate=2500 --num-calls=3</pre></div>
+	<p>
+		<img class="right" src="/static/img/content/network-timeline.png" alt="Chart of resource load times for this website" title="Network timeline" />
+		While the server may respond incredibly quickly to requests, the main delay is in the network round-trip time - i.e., the time it takes for a request to physically traverse the Internet. The order and loading of resources has been optimised to lower these delays to the absolute minimum. The chart alongside shows the network timeline for a request made in Melbourne, Australia to the server hosting this site - an EC2 instance in Tokyo, Japan. The blue vertical line represents the <a href="http://dev.w3.org/html5/spec/section-index.html#events-0">DOMContentLoaded</a> event, which, roughly speaking, is when the page begins to display. The bare minimum of resources are requested before allowing this event to occur. Other resources are then requested, and the page is 'finished' at the red vertical line. 
+	</p>
+</section>
+<section class="design">
+	<h1>Design</h1>
+	<p>
+		
+</section>
+{% endblock content %}
