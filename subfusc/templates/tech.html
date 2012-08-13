@@ -3,6 +3,7 @@
 <section class="stack">
 	<h1>Stack</h1>
 	<p>
+		<img class="seven columns omega right" src="/static/img/content/stack.png" alt="Diagram showing the software stack for this site" title="Stack" />
 		This site is cached by <a href="https://www.varnish-cache.org/">varnish</a>. Behind varnish, <a href="http://nginx.org/">nginx</a> either serves static files directly or hands off application requests to <a href="http://www.gevent.org/">gevent</a>. gevent serves a lightweight Python application written in the <a href="http://flask.pocoo.org/">Flask</a> web framework.
 	</p>
 	<p>
@@ -16,13 +17,36 @@
 	</p> 
 	<div class="syntax-wrap"><pre class="brush: bash syntax">$ sudo httperf --hog --server=bgraham.com.au --uri=/ --num-conns=5000 --rate=2500 --num-calls=3</pre></div>
 	<p>
-		<img class="right" src="/static/img/content/network-timeline.png" alt="Chart of resource load times for this website" title="Network timeline" />
-		While the server may respond incredibly quickly to requests, the main delay is in the network round-trip time - i.e., the time it takes for a request to physically traverse the Internet. The order and loading of resources has been optimised to lower these delays to the absolute minimum. The chart alongside shows the network timeline for a request made in Melbourne, Australia to the server hosting this site - an EC2 instance in Tokyo, Japan. The blue vertical line represents the <a href="http://dev.w3.org/html5/spec/section-index.html#events-0">DOMContentLoaded</a> event, which, roughly speaking, is when the page begins to display. The bare minimum of resources are requested before allowing this event to occur. Other resources are then requested, and the page is 'finished' at the red vertical line. 
+		<img class="six columns alpha left" src="/static/img/content/network-timeline.png" alt="Chart of resource load times for this website" title="Network timeline" />
+		While the server may respond incredibly quickly to requests, the majority of delay from a user perspective is caused by the network round-trip time - i.e., the time it takes for a request to physically traverse the Internet. The order and loading of resources has been optimised to lower these delays to the absolute minimum. The chart alongside shows the network timeline for a request made in Melbourne, Australia to the server hosting this site - an EC2 instance in Tokyo, Japan. The blue vertical line represents the <a href="http://dev.w3.org/html5/spec/section-index.html#events-0">DOMContentLoaded</a> event, which, roughly speaking, is when the page begins to display. The bare minimum of resources are requested before allowing this event to occur, meaning the delay is approximately double the network round-trip time. This is essentially the best attainable delay for a web page. Other resources are then requested, and the page is 'finished' at the red vertical line. 
 	</p>
 </section>
 <section class="design">
 	<h1>Design</h1>
 	<p>
-		
+		The design employed here is understated and emphasises readability - I hope. There are clear vertical lines for the eye to follow (note that all text abutts a single left rule), while horizontal spacing respects <a href="http://lamb.cc/typograph/">a certain rhythm</a>. Content is also readable on mobile or small-display devices without serving a different design - try resizing your browser window. The content will adjust gracefully all the way down to "mobile portrait" format, thanks to <a href="http://www.getskeleton.com/">Skeleton</a>.
+	</p>
+</section>
+<section class="deploy">
+	<h1>Deployment</h1>
+	<p>Development changes are pushed to a bare repository on the production server:</p>
+	<div class="syntax-wrap"><pre class="brush: bash syntax">$ git push live</pre></div>
+	<p>In that repository, a post-receive hook pushes to the directory the site is served from:</p>
+	<div class="syntax-wrap"><pre class="brush: bash syntax"># hooks/post-receive: 
+#!/bin/sh
+GIT_WORK_TREE=/var/www/subfusc/ git checkout -f</pre></div>
+	<p>This deployment method is very lightweight. Site customisation derives from the application loading config defaults but allowing an environment variable which specifies overrides in a local config file:</p>
+	<div class="syntax-wrap"><pre class="brush: python syntax">app = Flask(__name__)
+app.config.from_object('default-config')
+if os.environ.get('SUBFUSC_SETTINGS'):
+    app.config.from_envvar('SUBFUSC_SETTINGS')</pre></div>
+    <p><code>default-config.py</code> contains configs appropriate for production. <code>SUBFUSC_SETTINGS</code> is actually used to tailor the site for a development environment, e.g.:</p>
+    <div class="four columns alpha"><div class="syntax-wrap"><pre class="brush: python syntax"># site-config.py
+DEBUG = True</pre></div></div>
+<div class="one columns">&nbsp;</div>
+    <div class="nine columns omega"><div class="syntax-wrap"><pre class="brush: python syntax">$ export SUBFUSC_SETTINGS="$(pwd)/site-config.py"
+$ python Subfusc.py</pre></div></div>
+
+
 </section>
 {% endblock content %}

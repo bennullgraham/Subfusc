@@ -2,7 +2,11 @@ import os
 from flask import Flask, render_template
 from flask.ext.assets import Environment
 from webassets.loaders import YAMLLoader
-from gevent.wsgi import WSGIServer
+
+try:
+    from gevent.wsgi import WSGIServer
+except ImportError:
+    pass
 
 here, f = os.path.split(os.path.abspath(__file__))
 
@@ -21,7 +25,7 @@ bundles = YAMLLoader("%s/static-src/assets.yaml" % here).load_bundles()
 
 def run():
     if app.debug == True:
-        app.run(host='0.0.0.0')
+        app.run()
     else:
         http_server = WSGIServer(('', 5000), app)
         http_server.serve_forever()

@@ -24,8 +24,10 @@ body {
 header:hover {
 	nav {
 		-webkit-transition: height 0.2s, opacity 0.2s;
-		height: 82px;
+		-moz-transition: height 0.2s, opacity 0.2s;
+		-o-transition: height 0.2s, opacity 0.2s;
 		opacity: 1;
+		height: 82px;
 	}
 }
 
@@ -67,6 +69,8 @@ header {
 		}
 		opacity: 0;
 		-webkit-transition: height 0.2s 0.2s, opacity 0.2s 0.2s;
+		-moz-transition: height 0.2s 0.2s, opacity 0.2s 0.2s;
+		-o-transition: height 0.2s 0.2s, opacity 0.2s 0.2s;
 		overflow: hidden;
 		position: absolute;
 		bottom: 0;
@@ -98,7 +102,7 @@ header {
 					font-weight: normal;
 					color: white;
 					content: "//";
-					margin: 0 1em;
+					margin: 0 0.5em;
 					opacity: 0.5;
 				}
 			}
@@ -158,6 +162,9 @@ a {
 		background-color: rgba(85, 153, 204, 0.1);
 		text-decoration: none; 
 	}
+}
+p a:first-child {
+	padding-left: 0;
 }
 	
 
@@ -267,13 +274,13 @@ sup {
 	font-size: smaller;
 }
 
-p img {
-	&.left {
+p img.columns {
+	&.alpha {
 		float: left;
 		margin: 1em 1em 1em 0;
 	}
 
-	&.right {
+	&.omega {
 		float: right;
 		margin: 0 1em 1em 1em;
 	}
