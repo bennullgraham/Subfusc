@@ -1,2 +1,2 @@
-from subfusc import content
-content.run()
+import subfusc
+subfusc.run()
