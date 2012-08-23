@@ -1,6 +1,8 @@
 import os
 from flask import Flask, render_template
+from hamlish_jinja import HamlishExtension
 from subfusc.content import content
+
 
 # gevent is only required on production
 try:
@@ -8,11 +10,13 @@ try:
 except ImportError:
     pass
 
-
 app = Flask(__name__)
 app.config.from_object('default-config')
 if os.environ.get('SUBFUSC_SETTINGS'):
     app.config.from_envvar('SUBFUSC_SETTINGS')
+
+# hamlish!
+app.jinja_env.add_extension(HamlishExtension)
 
 # configure assets
 from flask.ext.assets import Environment
@@ -32,12 +36,12 @@ app.register_blueprint(content)
 
 @app.errorhandler(404)
 def not_found(error):
-    return render_template('404.html'), 404
+    return render_template('404.haml'), 404
 
 
 def run():
     if app.debug == True:
-        app.run()
+        app.run(host='0.0.0.0')
     else:
         http_server = WSGIServer(('', 5000), app)
         http_server.serve_forever()
