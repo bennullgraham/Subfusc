@@ -1,4 +1,12 @@
 -extends "layout/base.html"
+-macro date_range(from, to=''):
+    %span.date-range
+        &nbsp;(
+        %span.year << {{ from }}
+        &nbsp;-&nbsp;
+        %span.year << {{ to }}
+        )
+
 -block content
     %section.about
         %h1
@@ -18,94 +26,92 @@
             %li
                 Bachelor of Science (Computer Science and Software Engineering)
 
-%section.experience
-    %h1
-        Experience
-    %h2
-        Next Studio
-        %span.date-range
-            (
-            %span.year << 2007
-            &nbsp;- )
-    %p.sub
-        Web Development
+    %section.experience
+        %h1
+            Experience
+        %h2
+            Next Studio
+            =date_range(2007)
+            
+        %p.sub
+            Web Development
 
-    %ul.bullet
-        %li
-            Specified, designed and built a security-sensitive document tracking service with recurring payment processing and multiple user tiers.
-        %li
-            Responsible for moving integration, staging, and many production sites from internal or VPS hardware to Amazon EC2 instances.
-        %li
-            Championed adoption of issue tracking, continuous integration, more thorough project and code documentation, and responsiveness improvements through profiling and optimisation of HTML content and HTTP responses.
-        %li
-            Responsible for a complete functional and visual overhaul of standard CMS and Auth tools deployed with all company projects, including the addition of a fine-grained and flexible ACL-based authorisation system.
-        %li
-            Completed a full respecification and build of the company website, including CMS features to ensure it remains strictly XHTML+RDFa compliant.
-        %li
-            Experience with the full spectrum of small business operation, including quoting, specification, scheduling, client and project management, etc.
+        %ul.bullet
+            %li
+                Specified, designed and built a security-sensitive document tracking service with recurring payment processing and multiple user tiers.
+            %li
+                Responsible for moving integration, staging, and many production sites from internal or VPS hardware to Amazon EC2 instances.
+            %li
+                Championed adoption of issue tracking, continuous integration, more thorough project and code documentation, and responsiveness improvements through profiling and optimisation of HTML content and HTTP responses.
+            %li
+                Responsible for a complete functional and visual overhaul of standard CMS and Auth tools deployed with all company projects, including the addition of a fine-grained and flexible ACL-based authorisation system.
+            %li
+                Completed a full respecification and build of the company website, including CMS features to ensure it remains strictly XHTML+RDFa compliant.
+            %li
+                Experience with the full spectrum of small business operation, including quoting, specification, scheduling, client and project management, etc.
 
-    %h2
-        Zi-Argus
-        %span.date-range
-            (
-            %span.year << 2006
-             - 
-            %span.year << 2007
-            )
-    %p.sub
-        Industrial Automation and Control
+        %h2
+            Zi-Argus
+            =date_range(2006,2007)
+        %p.sub
+            Industrial Automation and Control
 
-    %ul.bullet
-        %li
-            Rewrote software controlling a multi-vat acid bath system, including collision avoidance and planning for a pair of overhead cranes, and a software interface which would visualise vat conflicts and allow timing offsets when scheduling a new sequence. My work here was projected to save the client $30,000 every year.
-        %li
-            Wrote software for a major Australian retailer which queried logistics databases to manage pallet facilities in a warehouse. This single-site software was flexible enough to subsequently be deployed to multiple sites.
-        %li
-            Responsible for purchasing, configuring and providing support for a company-wide automated full-disk backup system.
+        %ul.bullet
+            %li
+                Rewrote software controlling a multi-vat acid bath system, including collision avoidance and planning for a pair of overhead cranes, and a software interface which would visualise vat conflicts and allow timing offsets when scheduling a new sequence. My work here was projected to save the client $30,000 every year.
+            %li
+                Wrote software for a major Australian retailer which queried logistics databases to manage pallet facilities in a warehouse. This single-site software was flexible enough to subsequently be deployed to multiple sites.
+            %li
+                Responsible for purchasing, configuring and providing support for a company-wide automated full-disk backup system.
+        %h2
+            Textor
+            =date_range(2003,2005)
+        %p.sub
+            Synthetic Textile Manufactury
+        
+        %ul.bullet
+            %li
+                Helped specify and manage the deployment of SCADA systems to monitor factory equipment, along with fibre-optic networking to overcome interference issues in the existing factory electrical network.
+            %li
+                Created documentation and electrical diagrams for power distribution equipment throughout the factory.
 
-    %h2
-        Textor
-        %span.date-range
-            (
-            %span.year << 2003
-             - 
-            %span.year << 2005
-            )
-    %p.sub
-        Synthetic Textile Manufactury
-    
-    %ul.bullet
-        %li
-            Helped specify and manage the deployment of SCADA systems to monitor factory equipment, along with fibre-optic networking to overcome interference issues in the existing factory electrical network.
-        %li
-            Created documentation and electrical diagrams for power distribution equipment throughout the factory.
+    %section.skills
+        %h1
+            Skills
+        %p
+            I am a skilled PHP developer with full confidence in all languages and concepts used in a modern MVC web application. I can speak Python and Java competently, and have experience with several other languages. I administer many Linux machines (both virtual and actual computers), and am completely at home in a command-line environment.
 
-<section class="skills">
-    <h1>Skills</h1>
-    <p>
-        I am a skilled PHP developer with full confidence in all languages and concepts used in a modern MVC web application. I can speak Python and Java competently, and have experience with several other languages. I administer many Linux machines (both virtual and actual computers), and am completely at home in a command-line environment.
-    </p>
-    <dl class="fifteen columns">
-        <dt class="alpha four columns">Web Languages and Technologies</dt>
-        <dd class="omega eleven columns">PHP, HTML, CSS/SASS, Javascript, SQL. Various APIs including Google Maps, Facebook, Twitter and AWS. Adherance to accessibility guidelines. Semantically correct and strictly valid markup. Stress testing, profiling. Responsive design.</dd>
-        <dt class="alpha four columns">Libraries and Frameworks</dt>
-        <dd class="omega eleven columns">CakePHP (MVC), jQuery, Bootstrap, Skeleton, Dojo, Modernizr. Minifier, SyntaxHighlighter. PHPUnit.</dd>
-        <dt class="alpha four columns">Infrastructure and Systems</dt>
-        <dd class="omega eleven columns">Debian/Ubuntu administration. Xen and Virtualbox. AWS services such as S3 and EC2. LVM, RAID, scheduled backups. Apache, nginx, varnish, APC.</dd>
-        <dt class="alpha four columns">Security</dt>
-        <dd class="omega eleven columns">Prevention of XSS, SQL injection, and other web exploits. Sound understanding of good security practices, same origin policy, hashing and encryption strategies.</dd>
-        <dt class="alpha four columns">Software</dt>
-        <dd class="omega eleven columns">Subversion, git. Phing. Puppet. KCacheGrind, Charles, xhprof, apachebench, httperf. GNU coreutils. Molybdenum/Selenium. Chrome/Webkit Developer Tools.</dd>
-        <dt class="alpha four columns">Other Languages</dt>
-        <dd class="omega eleven columns">Fluent with Python and Bash. Competent ability with Java. Experience with Visual Basic and C++.</dd>
-    </dl>
-    <p>
-        For further technology-related acronyms, please see my <a href="//www.linkedin.com/profile/view?id=79501528" rel="me">LinkedIn profile</a>. For code samples, see my <a href="https://github.com/bennullgraham/" rel="me">GitHub account</a>. Finally, many of these skills were used in putting together this website. You may be interested in a <a href="/tech">reasonably detailed writeup</a>.
-    </p>
-</section>
-<section class="signoff">
-    <p>
-        Ben<br>
-        <a href="mailto:bgraham@bgraham.com.au" rel="me">bgraham@bgraham.com.au</a>
-    </p>
-</section>
+        %dl.fifteen.columns
+            %dt.alpha.four.columns << Web Languages and Technologies
+            %dd.omega.eleven.columns
+                PHP, HTML, CSS/SASS, Javascript, SQL. Various APIs including Google Maps, Facebook, Twitter and AWS. Adherance to accessibility guidelines. Semantically correct and strictly valid markup. Stress testing, profiling. Responsive design.
+
+            %dt.alpha.four.columns << Libraries and Frameworks
+            %dd.omega.eleven.columns
+                CakePHP (MVC), jQuery, Bootstrap, Skeleton, Dojo, Modernizr. Minifier, SyntaxHighlighter
+
+            %dt.alpha.four.columns << Infrastructure and Systems
+            %dd.omega.eleven.columns
+                Debian/Ubuntu administration. Xen and Virtualbox. AWS services such as S3 and EC2. LVM, RAID
+
+            %dt.alpha.four.columns << Security
+            %dd.omega.eleven.columns
+                Prevention of XSS, SQL injection, and other web exploits. Sound understanding of good security 
+
+            %dt.alpha.four.columns << Software
+            %dd.omega.eleven.columns
+                Subversion, git. Phing. Puppet. KCacheGrind, Charles, xhprof, apachebench, httperf. GNU core
+
+            %dt.alpha.four.columns << Other Languages
+            %dd.omega.eleven.columns
+                Fluent with Python and Bash. Competent ability with Java. Experience with Visual Basic and C++.
+
+        %p
+            For further technology-related acronyms, please see my <a href="//www.linkedin.com/profile/view?id=79501528" rel="me">LinkedIn profile</a>. For code samples, see my <a href="https://github.com/bennullgraham/" rel="me">GitHub account</a>. Finally, many of these skills were used in putting together this website. You may be interested in a <a href="/tech">reasonably detailed writeup</a>.
+
+        %section.signoff
+        %p
+            Ben
+            %br
+            %a href="mailto:bgraham@bgraham.com.au" rel="me"
+                bgraham@bgraham.com.au

@@ -1,10 +1,10 @@
-{% extends "layout/base.html" %}
-{% block content %}
-<section class="package-control">
-	<h1>Install Package Control</h1>
-	<p>
-		The apt-get of ST2. Paste the following in the ST2 console (<span class="key">Ctrl</span>+<span class="key">~</span>):
-	</p>
+-extends "layout/base.html"
+-block content
+	%section.package-control
+		%h1 << Install Package Control
+		%p
+			The apt-get of ST2. Paste the following in the ST2 console (<span class="key">Ctrl</span>+<span class="key">~</span>):
+	
 	<div class="syntax-wrap"><pre class="brush: python code">import urllib2,os
 pf='Package Control.sublime-package'
 ipp=sublime.installed_packages_path()
@@ -72,4 +72,3 @@ print 'Please restart Sublime Text to finish installation'</pre></div>
 }
 </pre></div>
 	</section>
-{% endblock content %}
