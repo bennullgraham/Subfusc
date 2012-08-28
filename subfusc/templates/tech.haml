@@ -9,8 +9,8 @@
                 alt="Diagram showing the software stack for this site" \
                 title="Stack"
             This site is cached by <a href="https://www.varnish-cache.org/">varnish</a>. Behind varnish, <a href="http://nginx.org/">nginx</a> either serves static files directly or hands off application requests to <a href="http://www.gevent.org/">gevent</a>. gevent serves a lightweight Python application written in the <a href="http://flask.pocoo.org/">Flask</a> web framework. gevent is monitored by <a href="http://supervisord.org/">Supervisor</a>.
-    %p
-        <a href="http://elsdoerfer.name/docs/flask-assets/">Flask-Assets</a> is employed to bundle and filter CSS and Javascript source files. Javascript is run through <a href="http://opensource.perlig.de/rjsmin/">rJsmin</a>, and CSS through <a href="https://github.com/Kronuz/pyScss/">pyScss</a>, a Python implementation of the compiler for the SCSS variant of <a href="http://sass-lang.com/">Sass</a>. All Javascript source is loaded asynchronously with a variant of <a href="http://www.dustindiaz.com/scriptjs/">$script.js</a>, with the exception of one or two small inline snippets (one of which is, obviously, the asynchronous loader itself).
+        %p
+            <a href="http://elsdoerfer.name/docs/flask-assets/">Flask-Assets</a> is employed to bundle and filter CSS and Javascript source files. Javascript is run through <a href="http://opensource.perlig.de/rjsmin/">rJsmin</a>, and CSS through <a href="https://github.com/Kronuz/pyScss/">pyScss</a>, a Python implementation of the compiler for the SCSS variant of <a href="http://sass-lang.com/">Sass</a>. All Javascript source is loaded asynchronously with a variant of <a href="http://www.dustindiaz.com/scriptjs/">$script.js</a>, with the exception of one or two small inline snippets (one of which is, obviously, the asynchronous loader itself).
     
     %section.performance
         %h1 << Performance
@@ -52,15 +52,15 @@
             |app.config.from_object('default-config')
             |if os.environ.get('SUBFUSC_SETTINGS'):
             |   app.config.from_envvar('SUBFUSC_SETTINGS')
-    %p
-        <code>default-config.py</code> contains configs appropriate for production. <code>SUBFUSC_SETTINGS</code> is actually used to tailor the site for a development environment, e.g.:
-    %div.four.columns.alpha
-        %div.syntax-wrap -> %pre.brush:.python.syntax
-            |# site-config.py
-            |DEBUG = True
-    %div.one.columns
-        &nbsp;
-    %div.nine.columns.omega
-        %div.syntax-wrap -> %pre.brush:.python.syntax
-            |$ export SUBFUSC_SETTINGS="$(pwd)/site-config.py"
-            |$ python Subfusc.py</pre></div></div>
+        %p
+            <code>default-config.py</code> contains configs appropriate for production. <code>SUBFUSC_SETTINGS</code> is actually used to tailor the site for a development environment, e.g.:
+        %div.four.columns.alpha
+            %div.syntax-wrap -> %pre.brush:.python.syntax
+                |# site-config.py
+                |DEBUG = True
+        %div.one.columns
+            &nbsp;
+        %div.nine.columns.omega
+            %div.syntax-wrap -> %pre.brush:.python.syntax
+                |$ export SUBFUSC_SETTINGS="$(pwd)/site-config.py"
+                |$ python Subfusc.py</pre></div></div>
