@@ -4,12 +4,6 @@ from hamlish_jinja import HamlishExtension
 from subfusc.content import content
 
 
-# gevent is only required on production
-try:
-    from gevent.wsgi import WSGIServer
-except ImportError:
-    pass
-
 app = Flask(__name__)
 app.config.from_object('default-config')
 if os.environ.get('SUBFUSC_SETTINGS'):
@@ -40,6 +34,13 @@ def not_found(error):
 
 
 def run():
+    # gevent is only required on production
+    try:
+        from gevent.wsgi import WSGIServer
+    except ImportError:
+        print "Warning: running in debug mode. Install gevent to avoid."
+        app.debug = True
+        pass
     if app.debug == True:
         app.run(host='0.0.0.0')
     else:
