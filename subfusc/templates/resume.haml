@@ -1,4 +1,4 @@
--extends "layout/base.html"
+-extends "layout/base.haml"
 -macro date_range(from, to=''):
     %span.date-range
         &nbsp;(
@@ -9,26 +9,21 @@
 
 -block content
     %section.about
-        %h1
-            Ben
+        %h1 << Ben
         %p
             I'm driven by curiosity and a need to know how things work. I enjoy finding patterns, whether they be in music, mathematics, lang  uage, or elsewhere. I don't think there's anything more valuable than a desire to learn, and second to this is a desire to teach. I'd rather <a href="http://www.thegeekstuff.com/2011/07/lazy-sysadmin/">put effort into automating something</a> than doing the thing itself, and similarly, I enjoy making something work well more than making it work. I read <a href="http://www.goodreads.com/user/show/3612009-ben">all sorts of things</a>. I write music, and have formed or been a member of bands that have played around Australia. I have <a href="https://picasaweb.google.com/106149912329040737914/2011India?authuser=0&amp;feat=directlink">hiked in the Himalayas</a> and the <a href="http://www.parks.tas.gov.au/index.aspx?base=7771">Tasmanian wilderness</a>, and lived abroad in <a href="http://en.wikipedia.org/wiki/Norrk%C3%B6ping">Norrköping, Sweden</a>.
 
     %section.education
-        %h1
-            Education
+        %h1 << Education
         %p
             I obtained the following degrees at Swinburne University of Technology (Hawthorn, Australia). One semester was completed at Linköping University (Linköping, Sweden)
 
         %ul.bullet
-            %li
-                Bachelor of Engineering (Robotics and Mechatronics)
-            %li
-                Bachelor of Science (Computer Science and Software Engineering)
+            %li << Bachelor of Engineering (Robotics and Mechatronics)
+            %li << Bachelor of Science (Computer Science and Software Engineering)
 
     %section.experience
-        %h1
-            Experience
+        %h1 << Experience
         %h2
             Next Studio
             =date_range(2007)
@@ -76,15 +71,14 @@
                 Created documentation and electrical diagrams for power distribution equipment throughout the factory.
 
     %section.skills
-        %h1
-            Skills
+        %h1 << Skills
         %p
             I am a skilled PHP developer with full confidence in all languages and concepts used in a modern MVC web application. I can speak Python and Java competently, and have experience with several other languages. I administer many Linux machines (both virtual and actual computers), and am completely at home in a command-line environment.
 
         %dl.fifteen.columns
             %dt.alpha.four.columns << Web Languages and Technologies
             %dd.omega.eleven.columns
-                PHP, HTML, CSS/SASS, Javascript, SQL. Various APIs including Google Maps, Facebook, Twitter and AWS. Adherance to accessibility guidelines. Semantically correct and strictly valid markup. Stress testing, profiling. Responsive design.
+                PHP, HTML, HAML, CSS, SASS/SCSS, Javascript, SQL. Various APIs including Google Maps, Facebook, Twitter and AWS. Adherance to accessibility guidelines. Semantically correct and strictly valid markup. Stress testing, profiling. Responsive design.
 
             %dt.alpha.four.columns << Libraries and Frameworks
             %dd.omega.eleven.columns

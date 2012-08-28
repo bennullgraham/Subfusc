@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+%html lang="en"
+	%head
+		-block head
+			-include 'layout/head.haml'
+	%body
+		%header
+			-block header
+				-include 'layout/header.haml'
+		%div.container
+			%div.main-column.fourteen.columns
+				-block content
+		-block js_body
+			%script
+				loadscript({% assets "js_syntax" %}'{{ ASSET_URL }}'{% endassets %}, function(){
+					SyntaxHighlighter.highlight();
+				});
