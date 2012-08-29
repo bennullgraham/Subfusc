@@ -1,2 +1,4 @@
 *.pyc
 *.sublime-*
+subfusc/static/.webassets-cache/
+subfusc/static/min/
