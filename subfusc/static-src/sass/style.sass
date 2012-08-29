@@ -1,5 +1,6 @@
 @import "skeleton"
 @import "mixin"
+
 $body_colour:           #222222
 $body_font:             1.2em
 
@@ -84,8 +85,7 @@ ul.bullet
             width: 1em
             height: 100%
 
-
-.main-column
+.main
     +columns(14)
     float: none
     display: block
@@ -119,7 +119,7 @@ div.syntax-wrap
     padding: 2em 2em 2em 40px
     background-color: rgba(0,0,0,0.01)
     border-radius: 5px
-    box-shadow: inset 0 0 35px rgba(0,0,0,0.07)
+    box-shadow: inset 2px 2px 25px rgba(0,0,0,0.09)
 
 
 .syntaxhighlighter, pre.code
@@ -150,7 +150,7 @@ span.key
 
 section.skills
     dl
-        +columns(15)
+        +columns(14)
         dt
             +columns(4)
             +alpha
@@ -162,7 +162,7 @@ section.skills
             text-align: left
             border-bottom: 1px solid #eee
         dd
-            +columns(11)
+            +columns(10)
             +omega
             margin: 0
             padding: 0.5em 0
@@ -178,8 +178,10 @@ sup
 
 p img.columns
     &.alpha
+        +columns(7)
         float: left
         margin: 1em 1em 1em 0
     &.omega
+        +columns(7)
         float: right
         margin: 0 1em 1em 1em
