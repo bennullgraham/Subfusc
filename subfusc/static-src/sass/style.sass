@@ -4,13 +4,29 @@
 $body_colour:           #222222
 $body_font:             1.2em
 
+$body_bg:               #fcfcfc
+
+html
+    background-color: $body_bg
+
 
 body
     font-size: $body_font
     color: $body_colour
     font-family: 'Open Sans Condensed', sans-serif
     +bg-gradient(rgb(250,248,245), rgb(255,255,255))
-    margin-bottom: 5em
+    background-color: #eee
+
+
+footer
+    //box-shadow: inset 2px 2px 25px rgba(0,0,0,0.09)
+    background: $body_bg -webkit-radial-gradient(top, 380px 15px, rgba(0,0,0,0.05), rgba(0,0,0,0))
+    text-align: center
+    margin: 5em 0 0 0
+    padding: 2em 0
+    font-weight: bold
+    font-size: 150%
+    color: #f9f9f9
 
 
 p
@@ -154,7 +170,6 @@ section.skills
         dt
             +columns(4)
             +alpha
-            margin: 0
             padding: 0.5em 0 0 0
             vertical-align: top
             color: #999
@@ -164,7 +179,6 @@ section.skills
         dd
             +columns(10)
             +omega
-            margin: 0
             padding: 0.5em 0
             vertical-align: top
             color: #222
