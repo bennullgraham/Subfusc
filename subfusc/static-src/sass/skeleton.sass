@@ -104,7 +104,8 @@ $margin: 10px
 /* Include clearfix on parent to clear nested columns, or wrap each row of columns in a @include row */
 @mixin clearfix 
     zoom: 1
-    &:after  clear: both 
+    &:after
+        clear: both 
     &:before, &:after 
         content: '\0020'
         display: block
