@@ -18,18 +18,18 @@ js_syntax:
 css_common:
     filters: 
         - sass
-        - cssprefixer
     output: min/common.css
     contents:
          - ../static-src/sass/reset.sass
          - ../static-src/sass/skeleton.sass
+         - ../static-src/sass/mixin.sass
          - ../static-src/sass/style.sass
+         - ../static-src/sass/header.sass
          - ../static-src/sass/font.sass
 
 css_syntax:
     filters: 
         - sass
-        - cssprefixer
     output: min/syntax.css
     contents:
         - ../static-src/sass/syntax/shCore.sass

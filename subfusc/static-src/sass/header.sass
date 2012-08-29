@@ -1,0 +1,59 @@
+@import "mixin"
+
+$header_height:     82px
+$header_v_pad:      20px
+
+header 
+    +bg-gradient(rgb(100,100,100), rgb(50,50,50))
+    padding: $header_v_pad 0
+    margin: 0 0 3em 0
+    border-bottom: 5px solid rgb(60, 75, 100) 
+    box-shadow: 0 0 35px #5f8a7d
+    position: relative
+
+    &:hover
+        nav 
+            +transition( (height 0.2s, opacity 0.2s) )
+            opacity: 1
+            height: $header_height
+
+    nav
+        opacity: 0
+        +transition( (height 0.2s 0.2s, opacity 0.2s 0.2s) )
+        overflow: hidden
+        position: absolute
+        bottom: 0
+        left: 0
+        width: 100%
+        height: $header_height - 20px
+        +bg-gradient(rgb(60,135,150), rgb(110,95,150), 'horizontal')
+        ul 
+            margin-left: -10px
+            li 
+                font-size: 110%
+                font-weight: bold
+                text-transform: uppercase
+                float: left
+                height: $header_height
+                line-height: $header_height + 4px
+                a 
+                    padding: 10px
+                    height: $header_height - 20px
+                    color: white
+                    &:hover 
+                        background-color: rgba(255,255,255,0.2)
+                    
+                &:after 
+                    font-weight: normal
+                    color: white
+                    content: "//"
+                    margin: 0 0.5em
+                    opacity: 0.5
+        h2 
+            +domsafe-hide
+    h1
+        line-height: 2em
+        font-size: 110%
+        font-weight: bold
+        color: #fff
+        text-shadow: rgba(0,0,0,0.5) 0 0 10px

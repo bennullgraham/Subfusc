@@ -1,0 +1,35 @@
+@mixin bg-gradient($from, $to, $dir: 'vertical')
+    @if $dir == 'vertical'
+        background-color: $to
+        background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, $from), color-stop(1, $to))
+        background-image: -webkit-linear-gradient(top, $from, $to)
+        background-image: -moz-linear-gradient(top, $from, $to)
+        background-image: -ms-linear-gradient(top, $from, $to)
+        background-image: -o-linear-gradient(top, $from, $to)
+        background-image: linear-gradient(top, bottom, $from, $to)
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{$from}', endColorstr='#{$to}')
+        -ms-filter: quote(progid:DXImageTransform.Microsoft.gradient(startColorstr='#{$from}', endColorstr='#{$to}'))
+    @else
+        background-color: $to
+        background-image: -webkit-gradient(linear, left top, right top, color-stop(0, $from), color-stop(1, $to))
+        background-image: -webkit-linear-gradient(left, $from, $to)
+        background-image: -moz-linear-gradient(left, $from, $to)
+        background-image: -ms-linear-gradient(left, $from, $to)
+        background-image: -o-linear-gradient(left, $from, $to)
+        background-image: linear-gradient(left, right, $from, $to)
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{$from}', endColorstr='#{$to}')
+        -ms-filter: quote(progid:DXImageTransform.Microsoft.gradient(startColorstr='#{$from}', endColorstr='#{$to}'))
+
+@mixin transition($arg)
+    -webkit-transition: $arg
+    -moz-transition: $arg
+    -ie-transition: $arg
+    -o-transition: $arg
+
+@mixin domsafe-hide()
+    position: absolute
+    top: 0
+    left: 0
+    width: 0
+    height: 0
+    text-indent: -10000px
