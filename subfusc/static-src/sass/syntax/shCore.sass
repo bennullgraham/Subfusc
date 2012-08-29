@@ -1,0 +1,214 @@
+/**
+ * SyntaxHighlighter
+ * http://alexgorbatchev.com/SyntaxHighlighter
+ *
+ * SyntaxHighlighter is donationware. If you are using it, please donate.
+ * http://alexgorbatchev.com/SyntaxHighlighter/donate.html
+ *
+ * @version
+ * 3.0.83 (July 02 2010)
+ * 
+ * @copyright
+ * Copyright (C) 2004-2010 Alex Gorbatchev.
+ *
+ * @license
+ * Dual licensed under the MIT and GPL licenses.
+ */
+.syntaxhighlighter
+  a, div, code
+    -moz-border-radius: 0 0 0 0
+    -webkit-border-radius: 0 0 0 0
+    background: none
+    border: 0
+    bottom: auto
+    float: none
+    height: auto
+    left: auto
+    margin: 0
+    outline: 0
+    padding: 0
+    position: static
+    right: auto
+    text-align: left
+    top: auto
+    vertical-align: baseline
+    width: auto
+    box-sizing: content-box
+    font-weight: normal
+    font-style: normal
+    min-height: inherit
+    min-height: auto
+  table
+    -moz-border-radius: 0 0 0 0
+    -webkit-border-radius: 0 0 0 0
+    background: none
+    border: 0
+    bottom: auto
+    float: none
+    height: auto
+    left: auto
+    margin: 0
+    outline: 0
+    padding: 0
+    position: static
+    right: auto
+    text-align: left
+    top: auto
+    vertical-align: baseline
+    width: auto
+    box-sizing: content-box
+    font-weight: normal
+    font-style: normal
+    min-height: inherit
+    min-height: auto
+    td, tr, tbody, thead, caption
+      -moz-border-radius: 0 0 0 0
+      -webkit-border-radius: 0 0 0 0
+      background: none
+      border: 0
+      bottom: auto
+      float: none
+      height: auto
+      left: auto
+      margin: 0
+      outline: 0
+      padding: 0
+      position: static
+      right: auto
+      text-align: left
+      top: auto
+      vertical-align: baseline
+      width: auto
+      box-sizing: content-box
+      font-weight: normal
+      font-style: normal
+      min-height: inherit
+      min-height: auto
+  textarea
+    -moz-border-radius: 0 0 0 0
+    -webkit-border-radius: 0 0 0 0
+    background: none
+    border: 0
+    bottom: auto
+    float: none
+    height: auto
+    left: auto
+    margin: 0
+    outline: 0
+    padding: 0
+    position: static
+    right: auto
+    text-align: left
+    top: auto
+    vertical-align: baseline
+    width: auto
+    box-sizing: content-box
+    font-weight: normal
+    font-style: normal
+    min-height: inherit
+    min-height: auto
+  width: 100%
+  position: relative
+  overflow: auto
+  &.source
+    overflow: hidden
+  .bold
+    font-weight: bold
+  .italic
+    font-style: italic
+  .line
+    white-space: pre
+  table
+    width: 100%
+    caption
+      text-align: left
+      padding: .5em 0 0.5em 1em
+    td
+      &.code
+        width: 100%
+        .container
+          position: relative
+          textarea
+            box-sizing: border-box
+            position: absolute
+            left: 0
+            top: 0
+            width: 100%
+            height: 100%
+            border: none
+            background: white
+            padding-left: 1em
+            overflow: hidden
+            white-space: pre
+      &.gutter .line
+        text-align: right
+        padding: 0 0.5em 0 1em
+  &.nogutter td.code
+    .container textarea, .line
+      padding-left: 0em
+  &.show
+    display: block
+  &.collapsed table
+    display: none
+  .toolbar
+    display: none
+    span.title
+      display: inline
+  &.printing
+    .line
+      &.alt1 .content, &.alt2 .content
+        background: none
+      &.highlighted
+        .number, &.alt1 .content, &.alt2 .content
+          background: none
+      .number
+        color: #bbbbbb
+      .content
+        color: black
+    .toolbar
+      display: none
+    a
+      text-decoration: none
+    .plain
+      color: black
+      a
+        color: black
+    .comments
+      color: #008200
+      a
+        color: #008200
+    .string
+      color: blue
+      a
+        color: blue
+    .keyword
+      color: #006699
+      font-weight: bold
+    .preprocessor
+      color: gray
+    .variable
+      color: #aa7700
+    .value
+      color: #009900
+    .functions
+      color: #ff1493
+    .constants
+      color: #0066cc
+    .script
+      font-weight: bold
+    .color1
+      color: gray
+      a
+        color: gray
+    .color2
+      color: #ff1493
+      a
+        color: #ff1493
+    .color3
+      color: red
+      a
+        color: red
+    .break
+      color: black
+      a
+        color: black

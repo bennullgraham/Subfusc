@@ -1,0 +1,256 @@
+body 
+    font-size: 1.2em
+    color: #222
+    font-family: 'Open Sans Condensed', sans-serif
+
+body 
+    
+    /* Opera 11.10+ */
+    background: -o-linear-gradient(top, rgba(250,248,245,1), rgba(255,255,255,1))
+    
+    /* Firefox 3.6+ */
+    background: -moz-linear-gradient(top, rgba(250,248,245,1), rgba(255,255,255,1))
+    
+    /* Chrome 7+ & Safari 5.03+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0, rgba(250,248,245,1)), color-stop(1, rgba(255,255,255,1)))
+    
+    background-repeat: no-repeat 
+    background-color: #fff 
+
+    margin-bottom: 5em
+
+header:hover 
+    nav 
+        -webkit-transition: height 0.2s, opacity 0.2s
+        -moz-transition: height 0.2s, opacity 0.2s
+        -o-transition: height 0.2s, opacity 0.2s
+        opacity: 1
+        height: 82px
+
+header 
+    background: -o-linear-gradient(top, rgba(100,100,100,1), rgba(50,50,50,1))
+    background: -moz-linear-gradient(top, rgba(100,100,100,1), rgba(50,50,50,1))
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0, rgba(100,100,100,1)), color-stop(1, rgba(50,50,50,1)))
+    
+    background-repeat: no-repeat 
+    background-color: rgb(40,40,40)
+    
+    padding: 1em 0
+    margin: 0 0 3em 0
+    
+    border-bottom: 5px solid rgb(60, 75, 100) 
+
+    -webkit-box-shadow: 0 0 35px #5f8a7d
+    -moz-box-shadow: 0 0 35px #5f8a7d
+    -o-box-shadow: 0 0 35px #5f8a7d
+
+    position: relative
+
+    h1 
+        line-height: 2em
+        font-size: 110%
+        font-weight: bold
+        color: #fff
+        text-shadow: rgba(0,0,0,0.5) 0 0 10px
+    
+    nav 
+        h2 
+            position: absolute
+            top: 0
+            left: 0
+            width: 0
+            height: 0
+            text-indent: -10000px
+        
+        opacity: 0
+        -webkit-transition: height 0.2s 0.2s, opacity 0.2s 0.2s
+        -moz-transition: height 0.2s 0.2s, opacity 0.2s 0.2s
+        -o-transition: height 0.2s 0.2s, opacity 0.2s 0.2s
+        overflow: hidden
+        position: absolute
+        bottom: 0
+        left: 0
+        width: 100%
+        height: 62px
+        background-color: rgba(60, 115, 150, 1)
+        background: -o-linear-gradient(left, rgba(60, 115, 150,1), rgba(110, 95, 150,1))
+        background: -moz-linear-gradient(left, rgba(60, 115, 150,1), rgba(110, 95, 150,1))
+        background: -webkit-gradient(linear, left top, right top, color-stop(0, rgba(60, 115, 150,1)), color-stop(1, rgba(110, 95, 150,1)))
+        ul 
+            margin-left: -10px
+            li 
+                font-size: 110%
+                font-weight: bold
+                text-transform: uppercase
+                float: left
+                height: 82px
+                line-height: 86px
+                a 
+                    padding: 10px
+                    height: 62px
+                    color: white
+                    &:hover 
+                        background-color: rgba(255,255,255,0.2)
+                    
+                
+                &:after 
+                    font-weight: normal
+                    color: white
+                    content: "//"
+                    margin: 0 0.5em
+                    opacity: 0.5
+
+p 
+    margin: 0 0 1em 0
+    line-height: 1.5em
+
+section 
+    h1 
+        text-transform: uppercase
+        font-weight: bold
+        margin: 0 0 1em 0 
+        color: #59c 
+    
+
+    margin: 0 0 3em 0
+
+
+dd, dt 
+    margin: 0.5em 0 
+
+dd 
+    color: #999 
+
+ul.links li 
+    position: relative 
+    margin: 0 0 1em 0 
+    @media only screen and (max-width: 767px) 
+        margin-left: 2em
+    
+    .icon 
+        position: absolute
+        top: 0
+        left: -2em 
+        width: 16px
+        height: 16px 
+        background: transparent url('/static/img/sprite-icon.png') no-repeat top left
+        text-indent: -10000px
+
+    .icon.gp  
+        background-position: 0px -00px 
+    .icon.li
+        background-position: 0px -16px 
+    .icon.em
+        background-position: 0px -32px 
+        
+a 
+    color: rgb(85, 153, 204)
+    text-decoration: none
+    padding: 0 0.2em
+    &:hover 
+        background-color: rgba(85, 153, 204, 0.1)
+        text-decoration: none 
+
+p a:first-child 
+    padding-left: 0
+
+ul.bullet 
+    li 
+        position: relative
+        margin: 0 0 0 2em
+        line-height: 1.5em
+        &:before 
+            position: absolute
+            left: -1.0em
+            display: block
+            font-weight: bold
+            content: "-"
+            color: #aaa
+            width: 1em
+            height: 100%
+
+.container 
+    overflow: hidden
+    .columns.main-column 
+        float: none
+        display: block
+        margin: 0 auto
+    
+h2 
+    margin: 1em 0
+    font-weight: bold
+    span.date-range 
+        font-size: 80%
+        color: #999
+
+p.sub 
+    font-size: 80%
+    color: #777
+
+span.inline-code 
+    background-color: rgb(250,250,250)
+    padding: 0 0.3em
+
+div.syntax-wrap 
+    margin: 1em 0 1em -40px
+    padding: 2em 2em 2em 40px
+    background-color: rgba(0,0,0,0.01)
+    -webkit-border-radius: 5px
+    -moz-border-radius: 5px
+    border-radius: 5px
+    -webkit-box-shadow: inset 0 0 35px rgba(0,0,0,0.07)
+    -moz-box-shadow: inset 0 0 35px rgba(0,0,0,0.07)
+    -o-box-shadow: inset 0 0 35px rgba(0,0,0,0.07)
+
+.syntaxhighlighter, pre.code 
+    font-family: "Ubuntu Mono", "Consolas", "Bitstream Vera Sans Mono", monospace
+    color: rgb(250,250,250)
+    display: block
+    line-height: 1.5em
+    font-size: 16px
+
+@media only screen and (max-width: 767px) 
+    div.syntax-wrap 
+        margin-left: 0  
+        padding: 2em 1em 2em 1em
+
+span.key 
+    background-color: rgb(220, 220, 220)
+    border: 2px solid #eee
+    border-color: #eee #aaa #aaa #eee
+    padding: 0 0.3em
+    margin: 0 0.1em
+
+.container section.skills dl 
+    margin: 0 0 1em 0
+
+section.skills 
+    dl 
+        dt 
+            margin: 0
+            padding: 0.5em 0 0 0
+            vertical-align: top
+            color: #999
+            line-height: 1.5em
+            text-align: left
+            border-bottom: 1px solid #eee
+        
+        dd 
+            margin: 0
+            padding: 0.5em 0
+            vertical-align: top
+            color: #222
+            line-height: 1.5em
+
+sup 
+    vertical-align: super
+    font-size: smaller
+
+p img.columns 
+    &.alpha 
+        float: left
+        margin: 1em 1em 1em 0
+    
+    &.omega 
+        float: right
+        margin: 0 1em 1em 1em    

@@ -16,17 +16,21 @@ js_syntax:
         - ../static-src/js/syntax/shBrushPython.js
 
 css_common:
-    filters: pyscss
+    filters: 
+        - sass
+        - cssprefixer
     output: min/common.css
     contents:
-         - ../static-src/scss/reset.scss
-         - ../static-src/scss/skeleton.scss
-         - ../static-src/scss/style.scss
-         - ../static-src/scss/font.scss
+         - ../static-src/sass/reset.sass
+         - ../static-src/sass/skeleton.sass
+         - ../static-src/sass/style.sass
+         - ../static-src/sass/font.sass
 
 css_syntax:
-    filters: pyscss
+    filters: 
+        - sass
+        - cssprefixer
     output: min/syntax.css
     contents:
-        - ../static-src/scss/syntax/shCore.scss
-        - ../static-src/scss/syntax/shThemeGithub.scss
+        - ../static-src/sass/syntax/shCore.sass
+        - ../static-src/sass/syntax/shThemeGithub.sass
