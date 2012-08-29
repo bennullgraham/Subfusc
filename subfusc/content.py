@@ -13,7 +13,7 @@ content = Blueprint('content', __name__, template_folder='templates')
 def show(page):
     try:
         git_dir = '--git-dir=%s' % current_app.config['GIT_DIR']
-        rev = check_output(['/usr/bin/git', git_dir, 'rev-parse', '--short', 'HEAD'])
+        rev = check_output(['git', git_dir, 'rev-parse', '--short', 'HEAD'])
     except CalledProcessError:
         rev = 'unknown'
 
