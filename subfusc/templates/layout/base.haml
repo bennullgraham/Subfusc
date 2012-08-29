@@ -15,3 +15,6 @@
 				loadscript({% assets "js_syntax" %}'{{ ASSET_URL }}'{% endassets %}, function(){
 					SyntaxHighlighter.highlight();
 				});
+		%footer
+			-block footer
+				-include 'layout/footer.haml'
