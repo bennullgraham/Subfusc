@@ -54,13 +54,10 @@
             |   app.config.from_envvar('SUBFUSC_SETTINGS')
         %p
             <code>default-config.py</code> contains configs appropriate for production. <code>SUBFUSC_SETTINGS</code> is actually used to tailor the site for a development environment, e.g.:
-        %div.four.columns.alpha
+        %div.two-abreast
             %div.syntax-wrap -> %pre.brush:.python.syntax
                 |# site-config.py
                 |DEBUG = True
-        %div.one.columns
-            &nbsp;
-        %div.nine.columns.omega
-            %div.syntax-wrap -> %pre.brush:.python.syntax
+            %div.syntax-wrap -> %pre.brush:.bash.syntax
                 |$ export SUBFUSC_SETTINGS="$(pwd)/site-config.py"
                 |$ python Subfusc.py</pre></div></div>

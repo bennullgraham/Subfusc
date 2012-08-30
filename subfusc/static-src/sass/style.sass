@@ -26,7 +26,7 @@ footer
     padding: 2em 0
     font-weight: bold
     font-size: 150%
-    color: #f9f9f9
+    color: #f3f3f3
 
 
 p
@@ -129,6 +129,15 @@ span.inline-code
     background-color: rgb(250,250,250)
     padding: 0 0.3em
 
+div.two-abreast
+    margin-left: -40px
+    margin-right: -40px
+    div.syntax-wrap
+        +columns(6)
+        &:first-child
+            +alpha
+        &:last-child
+            +omega
 
 div.syntax-wrap
     margin: 1em 0 1em -40px
