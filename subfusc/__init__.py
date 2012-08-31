@@ -6,6 +6,8 @@ from subfusc.content import content
 
 app = Flask(__name__)
 app.config.from_object('default-config')
+if os.path.isfile('local-config.py'):
+    app.config.from_object('local-config')
 if os.environ.get('SUBFUSC_SETTINGS'):
     app.config.from_envvar('SUBFUSC_SETTINGS')
 
