@@ -1,0 +1,27 @@
+-extends "layout/base.haml"
+-block content
+    %section.configs
+        %h1 << Git Configs
+        %p << Global git config:
+        %div.syntax-wrap -> %pre.brush:.ini.syntax
+            |[user]
+            |    name = Ben Graham
+            |    email = bgraham@bgraham.com.au
+            |
+            |[color]
+            |    branch = auto
+            |    diff = auto
+            |    status = auto
+            |
+            |[alias]
+            |    st = status
+            |    ci = commit
+            |    gr = log --graph --full-history --all --color --date=short --pretty=format:\"%Cred%h%x09 %Cblue%ad %Cgreen%d %Creset%s\"
+            |
+            |[core]
+            |    excludesfile = /home/bgraham/.gitignore
+        %p << Global <code>.gitignore</code> (referenced in <code>excludesfile</code> above)
+        %div.syntax-wrap -> %pre.brush:.ini.syntax
+            |*.sublime-project
+            |*.sublime-workspace
+
