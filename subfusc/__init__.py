@@ -2,6 +2,7 @@ import os
 from flask import Flask, render_template
 from hamlish_jinja import HamlishExtension
 from subfusc.content import content
+from subfusc.goodreads import goodreads
 
 
 app = Flask(__name__)
@@ -28,6 +29,7 @@ bundles = YAMLLoader("%s/static-src/assets.yaml" % here).load_bundles()
 
 # blueprints
 app.register_blueprint(content)
+app.register_blueprint(goodreads)
 
 
 @app.errorhandler(404)
