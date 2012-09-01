@@ -19,6 +19,7 @@ js_syntax:
 css_common:
     filters: 
         - sass
+        - cssmin
     output: min/common.css
     contents:
          - ../static-src/sass/reset.sass
