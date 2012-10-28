@@ -4,7 +4,7 @@
 		-block head
 			-include 'layout/head.haml'
 	%body
-		%header
+		%header#Header
 			-block header
 				-include 'layout/header.haml'
 		%div.container
@@ -12,7 +12,7 @@
 				-block content
 		-block js_body
 			%script
-				loadscript({% assets "js_syntax" %}'{{ ASSET_URL }}'{% endassets %}, function(){
+				loadscript({% assets "js_body" %}'{{ ASSET_URL }}'{% endassets %}, function(){
 					SyntaxHighlighter.highlight();
 				});
 		%footer

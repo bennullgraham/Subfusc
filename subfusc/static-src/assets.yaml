@@ -4,9 +4,9 @@ js_html5shiv:
     contents:
         - ../static-src/js/html5shiv/html5shiv.js
 
-js_syntax:
+js_body:
     filters: rjsmin
-    output: min/lib/syntax.js
+    output: min/lib/body.js
     contents:
         - ../static-src/js/syntax/shCore.js
         - ../static-src/js/syntax/shBrushBash.js
@@ -15,6 +15,11 @@ js_syntax:
         - ../static-src/js/syntax/shBrushPhp.js
         - ../static-src/js/syntax/shBrushPython.js
         - ../static-src/js/syntax/shBrushIni.js
+        - ../static-src/js/underscore.js
+        - ../static-src/js/stochast/fadable_colour.js
+        - ../static-src/js/stochast/gradient.js
+        - ../static-src/js/stochast/leaf.js
+        - ../static-src/js/stochast/stochast.js
 
 css_common:
     filters: 
