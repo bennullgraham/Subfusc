@@ -61,9 +61,9 @@ var Stochast = {
  */
     init: function() {
         var populateOpts = {
-            width: window.innerWidth
+            width: this.width()
         };
-        this.canvas.width  = window.innerWidth;
+        this.canvas.width  = this.width();
         this.canvas.height = 82;
         Gradient.init();
         this.bind();
@@ -97,9 +97,9 @@ var Stochast = {
  */
     handleResize: function() {
         var populateOpts = {
-            width: window.innerWidth
+            width: this.width()
         };
-        this.canvas.width = window.innerWidth;
+        this.canvas.width = this.width();
         this.leaves.populate(populateOpts);
         this.paused = false;
         this.resettle();
@@ -155,6 +155,10 @@ var Stochast = {
     resettle: function() {
         this.leaves.resettle();
         return this;
+    },
+
+    width: function() {
+        return document.getElementById('Header').offsetWidth;
     }
 };
 Stochast.init().run();
