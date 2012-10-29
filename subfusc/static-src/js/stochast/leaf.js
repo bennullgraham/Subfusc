@@ -1,8 +1,8 @@
-var Leaf = function(x, y, maxWidth) {
+var Leaf = function(x, y) {
     this.x = x;
     this.y = y;
     this.colour = new FadableColour();
-    this.ratio = (x / maxWidth);
+    this.sample_ratio = 0;
 };
 Leaf.prototype = {
     width: 10,
@@ -16,15 +16,17 @@ Leaf.prototype = {
     },
 
     resettle: function() {
-        var maxDisplace = 0.1;
+        var maxDisplace = 0.05;
         displace = (Math.random() * maxDisplace * 2) - maxDisplace;
-        target = Gradient.at(this.ratio + displace);
+        target = Gradient.at(this.sample_ratio + displace);
         this.colour.to(target, 15);
     },
 
     ratio: function(ratio) {
-        this.ratio = ratio ? ratio : this.ratio;
-        return this.ratio;
+        if (typeof ratio !== 'undefined') {
+            this.sample_ratio = ratio;
+        }
+        return this.sample_ratio;
     }
 
 };

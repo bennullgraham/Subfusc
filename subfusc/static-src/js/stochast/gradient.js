@@ -1,9 +1,9 @@
 var Gradient = {
     palettes: {
-        'purple': [
-            [72,  72,  150],
-            [150, 116,  147]
-        ]
+        'purple': {
+            'left': new Colour(72,  72,  150),
+            'right': new Colour(150, 116, 147)
+        }
     },
     stops: [
         new FadableColour(),
@@ -14,17 +14,14 @@ var Gradient = {
     },
     at: function(ratio) {
         ratio = Math.min(1, Math.max(0, ratio));
-        var left = this.stops[0].rgb();
-        var right = this.stops[1].rgb();
-        var r = Math.floor(((1 - ratio) * left[0]) + (ratio * right[0]));
-        var g = Math.floor(((1 - ratio) * left[1]) + (ratio * right[1]));
-        var b = Math.floor(((1 - ratio) * left[2]) + (ratio * right[2]));
-        return [r, g, b];
+        var left = this.stops[0].current;
+        var right = this.stops[1].current;
+        return left.multiply((1 - ratio)).add(right.multiply(ratio));
     },
     palette: function(palette, immediate) {
         steps = immediate ? 1 : 200;
-        var left = this.palettes[palette][0];
-        var right = this.palettes[palette][1];
+        var left = this.palettes[palette].left;
+        var right = this.palettes[palette].right;
         this.stops[0].to(left, steps);
         this.stops[1].to(right, steps);
         return this;

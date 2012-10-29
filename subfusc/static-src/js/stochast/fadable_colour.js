@@ -1,34 +1,31 @@
 var FadableColour = function() {
-    this.current = null;
-    this.target = [0, 0, 0];
-    this.distance = [0, 0, 0];
+    this.current = new Colour();
+    this.target = new Colour(0, 0, 0);
+    this.distance = new Colour(0, 0, 0);
     this.steps = 0;
     this.maxSteps = 1;
 };
 FadableColour.prototype = {
 
-    to: function(rgb, maxSteps) {
-        if (this.current === null) {
-            this.current = rgb;
+    to: function(Colour, maxSteps) {
+        if (this.current.defined() === false) {
+            this.current = Colour;
         }
         else if (!this.fading()) {
-            this.target = rgb;
+            this.target = Colour;
             this.maxSteps = maxSteps || 10;
             this.steps = 0;
-            this.distance[0] = (rgb[0] - this.current[0]);
-            this.distance[1] = (rgb[1] - this.current[1]);
-            this.distance[2] = (rgb[2] - this.current[2]);
+            this.distance = Colour.subtract(this.current);
         }
         return this;
     },
     step: function() {
-        if (this.current === null) {
+        if (this.current.defined() === false) {
             return this;
         }
         if (this.fading()) {
-            this.current[0] = this.current[0] + (this.distance[0] / this.maxSteps);
-            this.current[1] = this.current[1] + (this.distance[1] / this.maxSteps);
-            this.current[2] = this.current[2] + (this.distance[2] / this.maxSteps);
+            stepDistance = this.distance.divide(this.maxSteps);
+            this.current = this.current.add(stepDistance);
             this.steps++;
         } else {
             this.steps = 0;
@@ -37,15 +34,7 @@ FadableColour.prototype = {
         return this;
     },
     css: function() {
-        rgb = this.rgb();
-        return "rgb("+rgb[0]+","+rgb[1]+","+rgb[2]+")";
-    },
-    rgb: function() {
-        return [
-            Math.floor(this.current[0]),
-            Math.floor(this.current[1]),
-            Math.floor(this.current[2])
-        ];
+        return this.current.css();
     },
     fading: function() {
         return (this.maxSteps > 0 && this.steps < this.maxSteps);
